@@ -1,0 +1,1 @@
+{"name":"Local: increasing_array","url":"c:\\prep\\cses\\introductory_problems\\increasing_array.cpp","tests":[{"id":1734862430150,"input":"5\n3 2 5 1 7","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\prep\\cses\\introductory_problems\\increasing_array.cpp","group":"local","local":true}

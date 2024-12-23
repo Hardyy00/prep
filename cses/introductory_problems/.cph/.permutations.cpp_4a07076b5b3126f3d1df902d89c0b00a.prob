@@ -1,0 +1,1 @@
+{"name":"Local: permutations","url":"c:\\prep\\cses\\introductory_problems\\permutations.cpp","tests":[{"id":1734925992896,"input":"5","output":"1 3 5 2 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\prep\\cses\\introductory_problems\\permutations.cpp","group":"local","local":true}
