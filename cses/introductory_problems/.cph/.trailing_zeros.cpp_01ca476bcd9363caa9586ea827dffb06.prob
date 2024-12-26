@@ -1,0 +1,1 @@
+{"name":"Local: trailing_zeros","url":"c:\\prep\\cses\\introductory_problems\\trailing_zeros.cpp","tests":[{"id":1734966012710,"input":"20","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\prep\\cses\\introductory_problems\\trailing_zeros.cpp","group":"local","local":true}
