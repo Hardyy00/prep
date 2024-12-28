@@ -42,8 +42,6 @@ typedef vector<pair<int, int>> vpii;
 typedef vector<pair<long long, long long>> vpll;
 typedef priority_queue<int> pqi;
 typedef priority_queue<pair<int, int>> pqpii;
-typedef vector<char> vc;
-
 
 const ll MOD = 1e9 + 7;
 
@@ -76,12 +74,70 @@ void print_set(sll &s) {
 	cout << " } " << endl;
 }
 
+map<char, pair<ll, ll>> mp = {
+    {'D', {1, 0}},
+    {'R', {0, 1}},
+    {'L', {0, -1}},
+    {'U', {-1, 0}},
+};
+
+bool check(string &s){
+
+
+    ll r = 0, c =0;
+	ll n= s.size();
+
+    REP(i,0,n-1){
+
+		pll p = mp[s[i]];
+
+		r += p.F;
+		c += p.S;
+
+		if(r>=7 || r<0 || c>=7 || c<0){
+			return false;
+		}
+        
+    }
+
+	return r==6 && c==0;
+}
+
+
+ll dfs(ll idx, string &s, ll n){
+
+	if(idx == n){
+		return check(s);
+
+	}
+
+
+	if(s[idx] != '?' ){
+		return dfs(idx+1, s, n);
+	}
+
+	vc dir = {'D','L' ,'R', 'U'};
+	ll res = 0;
+
+	REP(i,0,3){
+		s[idx] = dir[i];
+		res += dfs(idx+1, s, n);
+		s[idx] = '?';
+
+	}
+	return res;
+}
 
 void solve() {
 
+    string s;
+    cin>> s;
 
 
 
+
+
+    cout << dfs(0, s, s.size()) << endl;;
 }
 
 int main() {

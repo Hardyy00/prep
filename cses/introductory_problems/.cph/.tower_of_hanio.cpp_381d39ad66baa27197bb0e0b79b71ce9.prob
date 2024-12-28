@@ -1,0 +1,1 @@
+{"name":"Local: tower_of_hanio","url":"c:\\prep\\cses\\introductory_problems\\tower_of_hanio.cpp","tests":[{"id":1735323183370,"input":"2","output":"3\n1 2\n1 3\n2 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\prep\\cses\\introductory_problems\\tower_of_hanio.cpp","group":"local","local":true}

@@ -42,8 +42,6 @@ typedef vector<pair<int, int>> vpii;
 typedef vector<pair<long long, long long>> vpll;
 typedef priority_queue<int> pqi;
 typedef priority_queue<pair<int, int>> pqpii;
-typedef vector<char> vc;
-
 
 const ll MOD = 1e9 + 7;
 
@@ -58,7 +56,7 @@ void print_map(mll &map) {
 	cout << " }" << endl;
 }
 
-void print_vector(vl &v) {
+void print_vector(vc &v) {
 
 	cout << "{ ";
 
@@ -79,9 +77,13 @@ void print_set(sll &s) {
 
 void solve() {
 
+    string s;
+	cin >> s;
 
+	ll n = s.size();
+	vector<vector<vector<ll>>> dp(n, vector<vector<ll>>(8,vector<ll>(8, -1)));
 
-
+	cout << dfs(n,) << endl;
 }
 
 int main() {
@@ -90,8 +92,6 @@ int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
-
-	
 		solve();
 	
 

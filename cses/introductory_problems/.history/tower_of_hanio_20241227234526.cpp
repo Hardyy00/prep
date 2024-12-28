@@ -76,10 +76,33 @@ void print_set(sll &s) {
 	cout << " } " << endl;
 }
 
+void dfs(ll n, ll src,ll helper, ll dest, vpll &ans){
+
+    if(n==0){
+        return;
+    }
+
+    dfs(n-1, src, dest, helper, ans);
+    ans.PB({src, dest});
+
+    dfs(n-1, helper,src, dest, ans);
+}
 
 void solve() {
 
+    ll n;
+    cin >> n;
 
+    vpll ans;
+
+    dfs(n,1,2,3, ans);
+
+    cout << ans.size() << endl;
+
+    fauto(i, ans){
+
+        cout << i.F <<" " << i.S << endl;
+    } 
 
 
 }

@@ -42,8 +42,6 @@ typedef vector<pair<int, int>> vpii;
 typedef vector<pair<long long, long long>> vpll;
 typedef priority_queue<int> pqi;
 typedef priority_queue<pair<int, int>> pqpii;
-typedef vector<char> vc;
-
 
 const ll MOD = 1e9 + 7;
 
@@ -76,12 +74,36 @@ void print_set(sll &s) {
 	cout << " } " << endl;
 }
 
+map<char, pair<ll, ll>> mp = {
+
+	{'D' : MP(1, 0) },
+	{'R' : MP(0,1) },
+	'L' : MP(0,-2),
+	'U' : MP(-1,0),
+
+}
+
+bool check(string &s){
+
+
+    ll r = 0, c =0;
+
+    REP(i,0,n-1){
+
+
+
+        
+    }
+}
+
 
 void solve() {
 
+    string s;
+    cin>> s;
 
 
-
+    cout << check("DRURRRRRDDDLUULDDDLDRRURDDLLLLLURULURRUULDLLDDDD");
 }
 
 int main() {

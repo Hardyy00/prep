@@ -42,8 +42,6 @@ typedef vector<pair<int, int>> vpii;
 typedef vector<pair<long long, long long>> vpll;
 typedef priority_queue<int> pqi;
 typedef priority_queue<pair<int, int>> pqpii;
-typedef vector<char> vc;
-
 
 const ll MOD = 1e9 + 7;
 
@@ -58,7 +56,7 @@ void print_map(mll &map) {
 	cout << " }" << endl;
 }
 
-void print_vector(vl &v) {
+void print_vector(vc &v) {
 
 	cout << "{ ";
 
@@ -76,12 +74,57 @@ void print_set(sll &s) {
 	cout << " } " << endl;
 }
 
+unordered_map<char, pair<ll, ll>> mp = {
+    {'D', {1, 0}},
+    {'R', {0, 1}},
+    {'L', {0, -1}},
+    {'U', {-1, 0}},
+};
+
+vc dir = {'D', 'L' , 'R', 'U'};
+
+
+ll dfs(ll idx, string &s, ll n, ll r, ll c, vector<vector<vector<ll>>> &dp){
+
+	if(r < 0 || c< 0 || r>=7 || c>=7){
+		return 0;
+	}
+
+	if(idx==s.size()){
+		return r==6 && c==0;
+	}
+
+	if(dp[idx][r][c] !=-1){
+		return dp[idx][r][c];
+	}
+
+	if(s[idx] != '?'){
+		return dfs(idx+1, s, n, r + mp[s[idx]].F , c + mp[s[idx]].S, dp);
+	}
+
+	ll res = 0;
+
+	fauto(d, dir){
+
+		res += dfs(idx+1, s, n , r + mp[d].F , c + mp[d].S   , dp);
+	}
+
+	return dp[idx][r][c] =  res;
+
+	
+}
 
 void solve() {
 
+    string s;
+    cin>> s;
 
+	ll n= s.size();
 
+	vector<vector<vector<ll>>> dp(n, vector<vector<ll>>(8, vector<ll>(8,-1)));
 
+	
+    cout << dfs(0, s, n, 0, 0, dp) << endl;;
 }
 
 int main() {

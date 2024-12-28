@@ -42,8 +42,6 @@ typedef vector<pair<int, int>> vpii;
 typedef vector<pair<long long, long long>> vpll;
 typedef priority_queue<int> pqi;
 typedef priority_queue<pair<int, int>> pqpii;
-typedef vector<char> vc;
-
 
 const ll MOD = 1e9 + 7;
 
@@ -58,7 +56,7 @@ void print_map(mll &map) {
 	cout << " }" << endl;
 }
 
-void print_vector(vl &v) {
+void print_vector(vc &v) {
 
 	cout << "{ ";
 
@@ -76,12 +74,37 @@ void print_set(sll &s) {
 	cout << " } " << endl;
 }
 
+unordered_map<char, pair<ll, ll>> mp = {
+
+	{'L', {0,-1}},
+	{'R', {0,1}},
+	{'U', {-1,0}},
+	{'D', {1,0}}
+}
+
+vc dir = {'D', 'L', 'R', 'U'};
+
+ll dfs(ll idx, ll r, ll c, ll n , vector<vector<vector<ll>>> &dp, vector<vector<bool>> &visit){
+
+	if(r < 0 || c< 0 || r>=7 || c>=7){
+		return 0;
+	}
+
+	if(idx==n){
+		return r==6 && c==0;
+	}
+}
 
 void solve() {
 
+    string s;
+	cin >> s;
 
+	ll n = s.size();
+	vector<vector<vector<ll>>> dp(n, vector<vector<ll>>(8,vector<ll>(8, -1)));
+	vector<vector<bool>> visit(8, vector<bool>(8));
 
-
+	cout << dfs(0,0,0,n, dp, visit) << endl;
 }
 
 int main() {
@@ -90,8 +113,6 @@ int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
-
-	
 		solve();
 	
 
