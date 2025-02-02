@@ -1,0 +1,1 @@
+{"name":"Local: towers","url":"c:\\prep\\cses\\searching-and-sorting\\towers.cpp","tests":[{"id":1738467862830,"input":"5\n3 8 2 1 5","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\prep\\cses\\searching-and-sorting\\towers.cpp","group":"local","local":true}
